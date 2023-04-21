@@ -1,14 +1,19 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
+import SearchScreen from "./src/screens/SearchScreen";
+
 const RootStack = createNativeStackNavigator();
 
 function App() {
     return (
         <NavigationContainer>
-            <Stack.Navigator>
-                <Stack.Screen name="Home" component={HomeScreen} />
-            </Stack.Navigator>
+            <RootStack.Navigator
+                initialRouteName="Search"
+                options={{ title: "Resto" }}
+            >
+                <RootStack.Screen name="Search" component={SearchScreen} />
+            </RootStack.Navigator>
         </NavigationContainer>
     );
 }
