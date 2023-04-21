@@ -10,7 +10,7 @@ function App() {
         <NavigationContainer>
             <RootStack.Navigator
                 initialRouteName="Search"
-                options={{ title: "Resto" }}
+                screenOptions={{ title: "Resto" }}
             >
                 <RootStack.Screen name="Search" component={SearchScreen} />
             </RootStack.Navigator>
